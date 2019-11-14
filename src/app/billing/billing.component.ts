@@ -23,7 +23,7 @@ export class BillingComponent implements OnInit {
 
   productsearch;
 
-  @ViewChild("getdate", {static: false}) div1: ElementRef;
+  @ViewChild("getdate", {static: false}) div1: ElementRef; 
 
   Updatebillbook = new FormGroup({
     product: new FormControl('',Validators.required),
