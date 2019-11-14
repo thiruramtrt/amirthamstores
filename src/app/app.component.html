@@ -1,7 +1,7 @@
 <!-- <app-navbar *ngIf = "navproperty"></app-navbar> -->
 <nav class="navbar navbar-default navbar-fixed-top" *ngIf="navproperty">
     <span class="open-slide">
-        <a href="#" onclick="openSlideMenu()">
+        <a onclick="openSlideMenu()">
             <svg width="30" height="30">
                 <path d="M0,4 30,4" stroke="#fff" stroke-width="3" />
                 <path d="M0,10 30,10" stroke="#fff" stroke-width="3" />
@@ -50,7 +50,7 @@
 
 <!--side-menu -->
 <div id="side-menu" class="side-nav" *ngIf="navproperty">
-        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
                
                <ul class="sub-menu">
                     <li><a href="#home" [routerLink]="['/']">HOME</a></li>
