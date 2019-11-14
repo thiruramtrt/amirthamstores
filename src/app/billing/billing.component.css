@@ -1,0 +1,28 @@
+td {
+    padding: 10px;
+}
+.modal-header{
+    background-color: aquamarine;
+}
+
+.row{
+margin-top: 0px;
+}
+
+.mystyle{
+    color: black;
+}
+
+.headstyle{
+    padding: 0px;
+    background-color: #4b6f75;
+    color: white;
+}
+
+/* .formstyle{
+    text-align: left;
+}
+
+.form-group{
+    margin-bottom: 8px !Important;
+} */

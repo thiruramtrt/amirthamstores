@@ -1,0 +1,199 @@
+<div class="col-md-12 text-center headstyle">
+    <h3>Billing Details</h3>
+</div>
+
+<div class="mystyle">
+    <div class="col-md-12">
+
+        <div class="col-md-12">
+            <div class="table-responsive col-md-4 text-center">
+                    <h3>Update Today Rate</h3>
+                    <br>
+                <form [formGroup]="Updatebillbook" (ngSubmit)="billsubmit()">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Date</td>
+                            <td #getdate>{{todaydate | date:'MM-dd-yyyy h:mm:ss a'}}</td>
+                        </tr>
+                        <tr>
+                            <td>Product</td>
+                            <td>
+                                <input formControlName="product" class="form form-control" list="productlist"
+                                    placeholder="Select product" [(ngModel)]="productsearch" />
+                                <datalist id="productlist">
+                                    <option *ngFor="let data of productdetail">{{data.product}}</option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td><button class="btn btn-primary"(click)="btnsearch()">search</button></td>
+                        </tr> -->
+                        <tr>
+                            <td>Quantity</td>
+                            <td><input type="number" formControlName="quantity" placeholder="quantity" class="form form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Rate</td>
+                            <td><input type="number" formControlName="rate" placeholder="rate" class="form form-control"></td>
+                        </tr>
+
+                    </table>
+                    <button type="submit" class="btn btn-primary"
+                                    [disabled]="Updatebillbook.pristine || Updatebillbook.invalid">Submit</button>
+                </form>
+
+                    
+            </div>
+
+
+            <div class="col-md-8 text-center">
+                    <h3>Add New Product</h3>
+                    <br>
+                <form [formGroup]="addbillbook" (ngSubmit)="addbillsubmit()">
+
+                    <div class="col-md-6 tableone">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Date</td>
+                            <td #getdate>{{todaydate | date:'MM-dd-yyyy h:mm:ss a'}}</td>
+                        </tr>
+                        <tr>
+                            <td>Product Name</td>
+                            <td>
+                                <input formControlName="productname" class="form form-control" placeholder="Product" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td><input type="number" formControlName="quantity" placeholder="quantity" class="form form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Rate</td>
+                            <td><input type="number" formControlName="rate" placeholder="rate" class="form form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>gst</td>
+                            <td><input type="number" formControlName="gst" placeholder="gst" class="form form-control"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6 tabletwo">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>thickness</td>
+                            <td><input type="text" formControlName="thickness" placeholder="thickness" class="form form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td><input type="text" formControlName="height" placeholder="height" class="form form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>type</td>
+                            <td><input type="text" formControlName="type" placeholder="type" class="form form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>brand</td>
+                            <td><input type="text" formControlName="brand" placeholder="brand" class="form form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>madein</td>
+                            <td><input type="text" formControlName="madein" placeholder="madein" class="form form-control"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <button type="submit" class="btn btn-primary" [disabled]="addbillbook.pristine || addbillbook.invalid">Submit</button>
+
+                </form>
+
+ 
+                    
+            </div>
+
+
+
+        </div>
+
+        <div class="col-md-12 text-center">
+            <br><br><br>
+        <button type="button" (click)="Getbillbook()">Refresh</button> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button data-toggle="modal" type="button" data-target="#billbook">Show
+                BillBook</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button (click)="logout()">Logout</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button (click)="returntohome()">Homepage</button>
+            <br><br><br>
+        </div>
+
+
+        <div class="modal fade" id="billbook" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Showing Billing Details</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+
+                            <div class="text-center">
+
+                                <span style="font-size: 30px;"><b>Amirtham Stores</b></span> <br>
+
+                                63/2 D, The Mail Road, pudukkotai<br>
+
+                                Billing details
+                                <hr>
+                            </div>
+
+                            <div class="col-md-12">
+                                <b>customer</b>:Walk in customer | <b>Mob</b>: 8764352343 <br>
+                                <b>Date</b>:{{date}}
+                                <hr>
+                            </div>
+                            <br>
+
+                            <div class="col-md-12" style="overflow: scroll;height: 273px;">
+                                <table class="table table-bordered">
+                                    <tr style="background-color: #dfe3e4;">
+                                        <th>Product</th>
+                                        <th>Qty</th>
+                                        <th>Rate</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                    <tr *ngFor="let data of productdetail">
+                                        <td>{{data.product}}</td>
+                                        <td>{{data.quantity}}</td>
+                                        <td>{{data.rate}}</td>
+                                        <td>{{data.amount}}</td>
+                                    </tr>
+
+
+                                </table>
+
+                                <div style="text-align: end">
+                                    <span style="font-size: 22px;">Total</span> &nbsp; : <span
+                                        style="font-size: 23px;">&nbsp; ₹ &nbsp;{{totalcoll}}</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

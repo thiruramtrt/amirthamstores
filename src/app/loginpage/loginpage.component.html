@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="loginbox">
+        <h1>Admin Login</h1>
+        <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+            <p>Username</p>
+            <input type="text" formControlName = "username" placeholder="Enter Username" />
+            <p>Pasword</p>
+            <input type="password" formControlName="password" placeholder="Enter Pasword" /><br>
+            <!-- <a href="">forget Pasword</a><br> -->
+            <button type="submit" class="btn  btn-lg" style="margin-left: 4em;" [disabled]="!loginform.valid">Submit</button><br><br>
+            <a (click)="logout()" style="font-size: 20px;margin-left: 1em;cursor: pointer;">>>>>Go To Homepage</a><br><br>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>
