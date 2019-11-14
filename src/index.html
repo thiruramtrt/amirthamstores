@@ -13,294 +13,295 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script>
-function openSlideMenu(){
-document.getElementById('side-menu').style.width='250px';
-document.getElementById('main').style.marginLeft='250px';
-}
-function closeSlideMenu(){
-document.getElementById('side-menu').style.width='0px';
-document.getElementById('main').style.marginLeft='0px';
-}
-</script>
-<style>
-  body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
+  function openSlideMenu(){
+  document.getElementById('side-menu').style.width='250px';
+  document.getElementById('main').style.marginLeft='250px';
   }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
+  function closeSlideMenu(){
+  document.getElementById('side-menu').style.width='0px';
+  document.getElementById('main').style.marginLeft='0px';
   }
-  h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }  
-  .jumbotron {
-      background-color: #f38181;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  
-     .col-sm-3 .img-responsive{
-	
-     margin:0 auto;
-	 padding-top:20px;
-	
-}
-
-
-  
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #f38181;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f38181;
-      font-size: 200px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #625772;
-  }
-  
-  .carousel-indicators{
-    z-index:0;
-  }
-  
-  .carousel-indicators li {
-      border-color: #625772;
-  }
-  .carousel-indicators li.active {
-      background-color: #625772;
-  }
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .navbar {
-      position:fixed;
-      margin-bottom: 0;
-	  padding-right:100px;
-      background-color: #f38181;
-      z-index: 2;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 2px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  
-  svg{
-  margin-top:15px;
-  margin-left:10px;
-}
-
-.side-nav{
-	height:100%;
-	width:0;
-	position: fixed;
-	z-index:3;
-	top:0;
-	left:0;
-	background-color:#625772;
-	opacity:1;
-	overflow-x:hidden;
-	padding-top: 50px;
-	transition:0.5s;
-}
-.side-nav a{
-	padding:10px 10px 10px 0px;
-	text-decoration:none;
-	font-size:14px;
-	color:#f38181;
-	display:block;
-	transition:0.3s;
-}
-.side-nav a:hover{
-	color:#fff;
-}
-.side-nav .btn-close{
-	position:absolute;
-	top:0;
-	right:22px;
-	font-size:36px;
-	margin-left:50px;
-}
-
-.sub-menu{
-  list-style:none;
-}
-
-  #btn{
-     background:#f38181;
-	 border-radius:5px;	 
-  }
-  #btn a{
-     text-decoration:none;
-     color:#fff;
-   
-  }
-  
-  
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f38181;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
+  </script>
+  <style>
+    body {
+        font: 400 15px Lato, sans-serif;
+        line-height: 1.8;
+        color: #818181;
     }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
+    h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #303030;
+        font-weight: 600;
+        margin-bottom: 30px;
     }
-  }
-  @media screen and (max-width: 768px) {
-     
-	.row{
-	
-     margin-top:40px;
-	
-}
+    h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }  
+    .jumbotron {
+        background-color: #f38181;
+        color: #fff;
+        padding: 100px 25px;
+        font-family: Montserrat, sans-serif;
+    }
     
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
+       .col-sm-3 .img-responsive{
+    
+       margin:0 auto;
+     padding-top:20px;
+    
   }
-  @media screen and (max-width: 480px) {
+  
+  
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    .bg-grey {
+        background-color: #f6f6f6;
+    }
+    .logo-small {
+        color: #f38181;
+        font-size: 50px;
+    }
     .logo {
-        font-size: 150px;
+        color: #f38181;
+        font-size: 200px;
     }
+    .carousel-control.right, .carousel-control.left {
+        background-image: none;
+        color: #625772;
+    }
+    
+    .carousel-indicators{
+      z-index:0;
+    }
+    
+    .carousel-indicators li {
+        border-color: #625772;
+    }
+    .carousel-indicators li.active {
+        background-color: #625772;
+    }
+    .item h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        font-weight: 400;
+        font-style: italic;
+        margin: 70px 0;
+    }
+    .item span {
+        font-style: normal;
+    }
+    .navbar {
+        position:fixed;
+        margin-bottom: 0;
+      padding-right:100px;
+        background-color: #f38181;
+        z-index: 2;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 2px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+    }
+    
+    svg{
+    margin-top:15px;
+    margin-left:10px;
   }
   
-  .dropdown-menu {
-        background-color:#f38181;
-    }
-   .dropdown-menu ul li a{
-         font-family: Montserrat, sans-serif;  	
-   }
-   
-@media(max-width:590px){
-.navbar-nav{display:none;}
+  .side-nav{
+    height:100%;
+    width:0;
+    position: fixed;
+    z-index:3;
+    top:0;
+    left:0;
+    background-color:#625772;
+    opacity:1;
+    overflow-x:hidden;
+    padding-top: 50px;
+    transition:0.5s;
+  }
+  .side-nav a{
+    padding:10px 10px 10px 0px;
+    text-decoration:none;
+    font-size:14px;
+    color:#f38181;
+    display:block;
+    transition:0.3s;
+  }
+  .side-nav a:hover{
+    color:#fff;
+  }
+  .side-nav .btn-close{
+    position:absolute;
+    top:0;
+    right:22px;
+    font-size:36px;
+    margin-left:50px;
+  }
   
-.dropdown-menu{
- margin-left:0;
- width:100%;
- outline:hide;
-}
+  .sub-menu{
+    list-style:none;
+  }
+  
+    #btn{
+       background:#f38181;
+     border-radius:5px;	 
+    }
+    #btn a{
+       text-decoration:none;
+       color:#fff;
+     
+    }
+    
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f38181;
+    }
+    .slideanim {visibility:hidden;}
+    .slide {
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+    }
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+    @media screen and (max-width: 768px) {
+       
+    .row{
+    
+       margin-top:40px;
+    
+  }
+      
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+      .btn-lg {
+          width: 100%;
+          margin-bottom: 35px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .logo {
+          font-size: 150px;
+      }
+    }
+    
+    .dropdown-menu {
+          background-color:#f38181;
+      }
+     .dropdown-menu ul li a{
+           font-family: Montserrat, sans-serif;  	
+     }
+     
+  @media(max-width:590px){
+  .navbar-nav{display:none;}
+    
+  .dropdown-menu{
+   margin-left:0;
+   width:100%;
+   outline:hide;
+  }
+  
+  }
+  @media(min-width: 765px){
+  .open-slide{
+    padding-top:30px;
+    display:none}
+   .side-nav{display:none;}
+  }   
+    </style>
+  </head>
 
-}
-@media(min-width: 765px){
-.open-slide{
-	padding-top:30px;
-	display:none}
- .side-nav{display:none;}
-}   
-  </style>
-</head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<body  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <div class="col-md-12" style="padding: 0px;">
     <app-root></app-root>
   </div>
 
-  <script>
-    $(document).ready(function () {
+  
+<script>
+    $(document).ready(function(){
       // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
           // Prevent default anchor click behavior
           event.preventDefault();
-
+    
           // Store hash
           var hash = this.hash;
-
+    
           // Using jQuery's animate() method to add smooth page scroll
           // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
             scrollTop: $(hash).offset().top
-          }, 900, function () {
-
+          }, 900, function(){
+       
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
           });
         } // End if
       });
-
-      $(window).scroll(function () {
-        $(".slideanim").each(function () {
+      
+      $(window).scroll(function() {
+        $(".slideanim").each(function(){
           var pos = $(this).offset().top;
-
+    
           var winTop = $(window).scrollTop();
-          if (pos < winTop + 600) {
-            $(this).addClass("slide");
-          }
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
         });
       });
     })
-  </script>
+    </script>
 
 </body>
 
