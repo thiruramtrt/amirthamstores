@@ -9,7 +9,7 @@ export class BillingserviceService {
 
   constructor(private http: HttpClient) { }
 
-  apiurl = 'http://localhost:3500/furtroutes/';
+  apiurl = 'https://amirthambackend.herokuapp.com/furtroutes/';
 
   getbillingdetails() {
     console.log('service call');

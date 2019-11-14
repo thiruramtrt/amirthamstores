@@ -33,7 +33,7 @@ export class AuthService {
   login(user: User) {
     console.log(user);
     var userdata;
-    var result = this.http.post('http://localhost:3500/commonroutes/logincheck',user)
+    var result = this.http.post('https://amirthambackend.herokuapp.com/commonroutes/logincheck',user)
     result.subscribe(data => {
     userdata = data;
     if (userdata.length !== 0) {
